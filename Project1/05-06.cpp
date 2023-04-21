@@ -202,7 +202,36 @@ public:
 	{
 		return Size;
 	}
+	Book* GetMas()
+	{
+		return Mas;
+	}
 
+	void Sort()
+	{
+
+	}
+	void Add(Book book)
+	{
+
+	}
+	void Insert(Book book, size_t Index)
+	{
+
+	}
+	void Delete(size_t Index)
+	{
+
+	}
+	void Delete(string Author)
+	{
+
+	}
+	void DeleteName(string Name)
+	{
+
+	}
+	Book SearchName(string Name);
 };
 
 
@@ -210,8 +239,8 @@ int main()
 {
 	Library Lib1(10);
 	Book book[10];
-	Library B
-	Library temp = Lib1;
+	//Library B
+	//Library temp = Lib1;
 	
 	Book A;
 	A.InitRand();
