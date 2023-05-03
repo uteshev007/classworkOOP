@@ -157,7 +157,27 @@ public:
     Library(Book book) : Library(&book, 1) {}
 
     // конструктор копирования
-    //Library( const Library & lib );
+    Library(const Library& lib)
+    {
+        Mas = new Book[lib.Size];
+        for (size_t i = 0; i < lib.Size; i++)
+        {
+            Mas[i] = lib.Mas[i];
+        }
+        Size = lib.Size;
+    }
+
+    Library & operator= (const Library& obj)
+    {
+        delete[] Mas; // удаляем старый массив текущего объекта
+        Mas = new Book[obj.Size]; // создать новый массив для текущего объекта
+        for (size_t i = 0; i < obj.Size; i++) {
+            Mas[i] = obj.Mas[i];
+        }
+        Size = obj.Size;
+        // возвращаем ссылку на текущий объект
+        return *this;
+    }
     // set
     void SetSize(size_t newSize); // задать новый размер библиотеки
     void SetMas(Book* newBooks, size_t newSize);
