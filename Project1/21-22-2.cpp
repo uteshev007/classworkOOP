@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <algorithm>
 #include <time.h>
 using namespace std;
@@ -104,11 +104,11 @@ int main()
 	/*
 	cout << endl << endl;
 	
-	// ïðèìåð ïðèâåäåíèÿ Complex ê string();
+	// Ð¿Ñ€Ð¸Ð¼ÐµÑ€ Ð¿Ñ€Ð¸Ð²ÐµÐ´ÐµÐ½Ð¸Ñ Complex Ðº string();
 	string strA = string(A);
 	string str;
-	// ñîçäàíèå ïîëíîãî âûðàæåíèÿ ÷åðåç string() - ëîæèì ÷èñëà 
-	// è çíàêè â ñòðîêó
+	// ÑÐ¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð¿Ð¾Ð»Ð½Ð¾Ð³Ð¾ Ð²Ñ‹Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ Ñ‡ÐµÑ€ÐµÐ· string() - Ð»Ð¾Ð¶Ð¸Ð¼ Ñ‡Ð¸ÑÐ»Ð° 
+	// Ð¸ Ð·Ð½Ð°ÐºÐ¸ Ð² ÑÑ‚Ñ€Ð¾ÐºÑƒ
 	str = string(A) + " + " + string(B) + " = " + string(A + B);
 	cout << str << endl;
 	*/
