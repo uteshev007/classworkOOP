@@ -2,7 +2,7 @@ Boeing
 320
 310
 
-Antonov
-50
-14
+d
+0
+0
 
