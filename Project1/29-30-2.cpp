@@ -72,7 +72,7 @@ public:
 		for (int i = 0; i < vec.Size; i++)
 		{
 			cout << i + 1 << "->";
-			is >> vec.SetData[i];
+			is >> vec.Data[i];
 		}
 		return is;
 	}
@@ -93,7 +93,7 @@ public:
 	{
 		T Summa = 0;
 		for (int i = 0; i < Size; i++)
-			Summa += Data[i]
+			Summa += Data[i];
 		return Summa;
 	}
 	// Нахождение мин/макс значений
@@ -117,8 +117,8 @@ public:
 template <class T>
 void Vector<T>::SetSize(int newSize)
 {
-	T* temp = new T[newSize]
-		int MinSize = (this->Size < newSize) ? Size : newSize;
+	T* temp = new T[newSize];
+		int MinSize = (Size < newSize) ? Size : newSize;
 	for (int i = 0; i < MinSize; i++)
 		temp[i] = this->Data[i];
 	delete this->Data;
@@ -137,10 +137,55 @@ void Vector <T>::SetData(const T* arr, int size)
 	this->Size = size;
 }
 
-// перегруженный оператор вывода
-
 int main()
 {
-
+	Vector <string> A;
+	cin >> A;
+	cin.ignore();
+	cout << A << endl;
+	A.SetSize(A.getSize() + 2);
+	cout << "Enter 2 string: \n";
+	for (int i = 2; i > 0; i--)
+	{
+		string temp;
+		getline(cin, temp);
+		A[A.getSize() - i] = temp;
+		cout << A << endl;
+		//cin >> A[A.getSize() - i];
+	}
 
 }
+
+// перегруженный оператор вывода
+
+int main_int()
+{
+	Vector<int> A;
+	Vector <string> B;
+	A.SetSize(5);
+	cin >> A;
+	cout << A;
+	//A.getSize();
+	const int* temp = A.getData();
+	for (int i = 0; i < A.getSize(); i++)
+	{
+		cout << temp[i] << " ";
+	}
+	cout << endl;
+	for (int i = 0; i < A.getSize(); i++)
+	{
+		cout << A[i] << " ";
+	}
+	cout << endl;
+	cout << "---------------\n";
+
+	Vector<int> A2 = A;
+	cout << A2;
+	A2.SetSize(12);
+	A2(-5,8);
+	cout << "A2 = " << A2 << endl;
+	int Summa = A2();
+	cout << "Summa = " << Summa << endl;
+	return 0;
+}
+
