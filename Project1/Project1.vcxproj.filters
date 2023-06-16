@@ -57,7 +57,7 @@
     <ClCompile Include="29-30-2.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="30-31.cpp">
+    <ClCompile Include="30-32.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="30-31-2.cpp">
@@ -69,5 +69,13 @@
     <ClCompile Include="34-35.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="37-38.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TList2.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
