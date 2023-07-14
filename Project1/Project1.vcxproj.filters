@@ -78,7 +78,10 @@
     <ClCompile Include="41-42-2.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="43-44.cpp">
+    <ClCompile Include="51-52.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="49-50.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

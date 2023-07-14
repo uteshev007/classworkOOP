@@ -2,8 +2,8 @@
 #include <fstream>  // файловые потоки
 #include <sstream>  // строковый поток
 #include <iomanip>  // манипуляторы
-
-// контейнеры
+		
+			// контейнеры
 #include <string>
 #include <vector> // std::vector<> - динамический массив
 #include <array>  // std::array<> - аналог статического массива
@@ -30,9 +30,9 @@ struct LC { LC() { system("chcp 1251 > nul"); srand(time(0)); }~LC() { cin.get()
 Переопределите функцию Print() для вывода информации, соответствующей каждому типу служащего.
 */
 
-class Employer
+class Employer 
 {
-private:
+private: 
 	string Type;
 protected:
 	string FIO;
@@ -89,7 +89,7 @@ class President : virtual public Employer
 {
 private:
 	//const string _type = "Президент";
-#define _type  "Президент"
+	#define _type  "Президент"
 protected:
 	string Company;
 public:
@@ -168,90 +168,90 @@ Employer* CreateEmployer()
 	int choice;
 	(cin >> choice).ignore();
 	Employer* pEmpl = nullptr;
-	<<<<<< < HEAD
-		switch (choice)
-		{
-		case 1: pEmpl = new President; break;
-		case 2: pEmpl = new Manager; break;
-		case 3: pEmpl = new Worker; break;
-		case 0: pEmpl = nullptr; break;
-		default:
-			cout << "Ошибка выбора!"; break;
-			====== =
-				switch (choice)
-				{
-				case 1: pEmpl = new President; break;
-				case 2: pEmpl = new Manager; break;
-				case 3: pEmpl = new Worker; break;
-				case 0: pEmpl = nullptr; break;
-				default:
-					cout << "Ошибка выбора!"; break;
-					>>>>>> > 21f57d53ba093969d333c10caac00086bdba2647
-				} //switch (choice)
-			return pEmpl;
-		} //CreateEmployer()
-
-	int main()
+<<<<<<< HEAD
+	switch (choice)
 	{
-		<<<<<< < HEAD
-			while (true)
-			{
-				Employer* pEm = CreateEmployer();
-				if (pEm != nullptr)
-				{
-					pEm->Input();
-					cout << "-------------------\n";
-					pEm->Print();
-					cout << "-------------------\n";
-					delete pEm;
-				}
-				else
-					break;
-				====== =
-					while (true)
-					{
-						Employer* pEm = CreateEmployer();
-						if (pEm != nullptr)
-						{
-							pEm->Input();
-							cout << "-------------------\n";
-							pEm->Print();
-							cout << "-------------------\n";
-							delete pEm;
-						}
-						else
-							break;
-						>>>>>> > 21f57d53ba093969d333c10caac00086bdba2647
-					}
-				cout << "Good Bye...";
-			}
+	case 1: pEmpl = new President; break;
+	case 2: pEmpl = new Manager; break;
+	case 3: pEmpl = new Worker; break;
+	case 0: pEmpl = nullptr; break;
+	default:
+		cout << "Ошибка выбора!"; break;
+=======
+	switch (choice)
+	{
+	case 1: pEmpl = new President; break;
+	case 2: pEmpl = new Manager; break;
+	case 3: pEmpl = new Worker; break;
+	case 0: pEmpl = nullptr; break;
+	default:
+		cout << "Ошибка выбора!"; break;
+>>>>>>> 21f57d53ba093969d333c10caac00086bdba2647
+	} //switch (choice)
+	return pEmpl;
+} //CreateEmployer()
 
-		int oldmain()
+int main()
+{
+<<<<<<< HEAD
+	while (true)
+	{
+		Employer* pEm = CreateEmployer();
+		if (pEm != nullptr)
 		{
-			//Employer E("Директор");
-			President P;
-			Manager M;
-
-			//E.Input();
-			//E.Print();
-			//cout << "-------------------\n";
-			//P.Input();
-			//P.Print();
-			//cout << "-------------------\n";
-			//M.Input();
-			//M.Print();
-			//cout << "-------------------\n";
-
-
-			Employer* pEmpl = &M;
-			pEmpl->Input();
-			pEmpl->Print();
+			pEm->Input();
 			cout << "-------------------\n";
-
-			pEmpl = &P;
-			pEmpl->Input();
-			pEmpl->Print();
+			pEm->Print();
 			cout << "-------------------\n";
-			return 1;
+			delete pEm;
 		}
+		else
+			break;
+=======
+	while (true)
+	{
+		Employer* pEm = CreateEmployer();
+		if (pEm != nullptr)
+		{
+			pEm->Input();
+			cout << "-------------------\n";
+			pEm->Print();
+			cout << "-------------------\n";
+			delete pEm;
+		}
+		else
+			break;
+>>>>>>> 21f57d53ba093969d333c10caac00086bdba2647
+	}
+	cout << "Good Bye...";
+}
+
+int oldmain()
+{
+	//Employer E("Директор");
+	President P;
+	Manager M;
+
+	//E.Input();
+	//E.Print();
+	//cout << "-------------------\n";
+	//P.Input();
+	//P.Print();
+	//cout << "-------------------\n";
+	//M.Input();
+	//M.Print();
+	//cout << "-------------------\n";
+	
+
+	Employer* pEmpl = &M;
+	pEmpl->Input();
+	pEmpl->Print();
+	cout << "-------------------\n";
+
+	pEmpl = &P;
+	pEmpl->Input();
+	pEmpl->Print();
+	cout << "-------------------\n";
+	return 1;
+}
 

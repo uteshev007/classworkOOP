@@ -98,7 +98,7 @@ public:
     Circle(float r) : Circle() {
         R = r;
     }
-    virtual void Print() const override {
+    virtual void Print() const override{
         Shape::Print(); // cout << S <<endl;
         cout << typeid(*this).name() << endl; // class Rect
         cout << "R = " << R << endl;
@@ -112,7 +112,7 @@ public:
         S = M_PI * R * R; // площадь круга
         return S;
     }
-    virtual ~Circle() override {}
+    virtual ~Circle () override {}
 }; // class Circle;
 
 Shape* CreateShape(int type)
@@ -121,8 +121,8 @@ Shape* CreateShape(int type)
     {
     case 1: return new Rect;
     case 2: return new Circle;
-        //case 3: return new Triangle;
-        return nullptr;
+    //case 3: return new Triangle;
+    return nullptr;
 
     }
 }
